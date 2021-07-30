@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Latihan 1</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'PT Sans', sans-serif;
+      padding: 50px 20px 0;
+    }
+
+    .formulir {
+      width: 65%;
+      margin: 0 auto;
+      padding: 15px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      border-radius: 10px;
+    }
+
+    .formulir .title {
+      font-weight: bold;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+      font-size: 22px;
+      padding-bottom: 3px;
+    }
+
+    .formulir form {
+      margin-top: 30px;
+    }
+
+    .formulir .input-data {
+      margin-bottom: 1rem;
+    }
+
+    .formulir .input-data label span:not(.required) {
+      width: 250px;
+      font-weight: 500;
+      float: left;
+      padding-top: 4px;
+      padding-right: 5px;
+    }
+
+    .formulir .input-data input:not([type=radio], [type=checkbox]),
+    .formulir .input-data textarea,
+    .formulir .input-data select {
+      width: 50%;
+      box-sizing: border-box;
+      border: 1px solid #c2c2c2;
+      box-shadow: 1px 1px 4px #EBEBEB;
+      border-radius: 3px;
+      padding: 7px;
+      outline: none;
+    }
+
+    .formulir .input-data .radio {
+      width: 50%;
+    }
+
+    .formulir .input-data .radio label {
+      display: block;
+    }
+
+    .formulir .input-data .radio input {
+      border: 1px solid #0c0;
+    }
+
+    .formulir .input-data input:focus {
+      border: 1px solid #0c0
+    }
+
+    .formulir .input-data label span .required {
+      color: red;
+    }
+
+    .formulir .button {
+      text-align: center;
+    }
+
+    .formulir .button input {
+      border: none;
+      padding: 8px 15px 8px 15px;
+      background: #FF8500;
+      color: #fff;
+      box-shadow: 1px 1px 4px #DADADA;
+      border-radius: 3px;
+    }
+
+    .formulir .button input:hover {
+      background: #EA6B00;
+      color: #fff;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 25px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="formulir">
+    <form action="" method="POST" enctype="multipart/form-data">
+
+
+      <div class="input-data">
+        <label for="nama-lengkap">
+          <span>Nama Lengkap (wajib)</span>
+        </label>
+
+        <input type="text" name="nama_lengkap" id="nama-lengkap" required="required">
+      </div>
+
+      <div class="input-data">
+        <label for="data-npm">
+          <span>NPM</span>
+        </label>
+
+        <input type="text" name="npm" id="data-npm" required>
+      </div>
+
+      <div class="input-data">
+        <label for="scan-ktm">
+          <span>File Scan KTM</span>
+        </label>
+
+        <input type="file" name="file_ktm" id="scan-ktm">
+      </div>
+
+      <div class="input-data">
+        <label>
+          <span>Jenis Kelamin</span>
+        </label>
+
+        <div class="radio">
+          <label for="laki-laki">
+            <input type="radio" name="jenis_kelamin" value="l" id="laki-laki" checked> Laki-laki
+          </label>
+          <label for="perempuan">
+            <input type="radio" name="jenis_kelamin" value="p" id="perempuan"> Perempuan
+          </label>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <label for="prodi">
+          <span>Pilih Prodi</span>
+        </label>
+        <select id="prodi" name="prodi">
+          <option disabled selected>Pilih prodi...</option>
+          <option value="A">Informatika</option>
+          <option value="B">Teknik Elektro</option>
+          <option value="C">Teknik Mesin</option>
+          <option value="D">Teknik Sipil</option>
+          <option value="E">Arsitektur</option>
+          <option value="F">Sistem Informasi</option>
+        </select>
+      </div>
+
+      <div class="input-data">
+        <label for="setuju">
+          <input type="checkbox" name="setuju" value="ya" id="setuju">
+          Saya setuju menjadi anggota UKM XYZ FT Unib
+        </label>
+      </div>
+
+      <div class="input-data">
+        <label for="email">
+          <span>Email</span>
+        </label>
+
+        <input type="email" name="email" id="email">
+      </div>
+
+      <div class="input-data">
+        <label for="pw">
+          <span>Password</span>
+        </label>
+
+        <input type="password" name="password" id="pw">
+      </div>
+
+      <div class="button">
+        <input type="submit" value="Ayo Daftar!">
+        <input type="reset" value="Reset Form">
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>

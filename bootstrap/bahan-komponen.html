@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Komponen Bootstrap</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      padding-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <form action="#" method="post">
+          <h3 class="display-5">Formulir Pendaftaran UKM XYZ Fakultas Teknik UNIB</h3>
+
+          <div>
+            <label for="nama-lengkap">Nama Lengkap:</label>
+            <input type="text" name="nama_lengkap" id="nama-lengkap" required="required">
+          </div>
+
+          <div>
+            <label for="npm">NPM:</label>
+            <input type="text" name="npm" id="npm" required="required">
+          </div>
+
+          <div>
+            <label for="prodi">Prodi:</label>
+            <select name="prodi" id="prodi">
+              <option value="A">Informatika</option>
+              <option value="B">Teknik Elektro</option>
+              <option value="C">Teknik Mesin</option>
+              <option value="D">Teknik Elektro</option>
+              <option value="E">Arsitektur</option>
+              <option value="F">Sistem Informasi</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="scan-ktm">File Scan KTM:</label>
+            <input type="file" name="ktm" id="scan-ktm">
+          </div>
+
+          <div>
+            <input type="submit" value="Daftar">
+          </div>
+
+        </form>
+      </div>
+
+      <div class="col-6">
+        <h5>Daftar Buah</h5>
+        <ul>
+          <li>Apel</li>
+          <li>Mangga</li>
+          <li>Jeruk</li>
+          <li>Semangka</li>
+          <li>Rambutan</li>
+          <li>Nanas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-6">
+        <!-- Ubah tabel berikut sehingga menggunakan styling Bootstrap -->
+        <h5>Tabel</h5>
+        <table>
+          <thead>
+            <tr>
+              <th>Judul 1</th>
+              <th>Judul 2</th>
+              <th>Judul 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kolom 1 dibaris 1</td>
+              <td>Kolom 2 dibaris 1</td>
+              <td>Kolom 3 dibaris 1</td>
+            </tr>
+
+            <tr>
+              <td>Kolom 1 dibaris 2</td>
+              <td>Kolom 2 dibaris 2</td>
+              <td>Kolom 3 dibaris 2</td>
+            </tr>
+
+            <tr>
+              <td>Kolom 1 dibaris 3</td>
+              <td>Kolom 2 dibaris 3</td>
+              <td>Kolom 3 dibaris 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6">
+        <img
+          src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbGR8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

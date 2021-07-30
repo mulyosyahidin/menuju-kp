@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html> 
+<head>
+  <title>Formulir</title>
+ 
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'PT Sans', sans-serif;
+      padding: 50px 20px 0;
+    }
+ 
+    .formulir {
+      width: 65%;
+      margin: 0 auto;
+      padding: 15px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      border-radius: 10px;
+    }
+ 
+    .formulir .title {
+      font-weight: bold;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+      font-size: 22px;
+      padding-bottom: 3px;
+    }
+ 
+    .formulir form {
+      margin-top: 30px;
+    }
+ 
+    .formulir .input-data {
+      margin-bottom: 1rem;
+    }
+ 
+    .formulir .input-data label span:not(.required) {
+      width: 250px;
+      font-weight: 500;
+      float: left;
+      padding-top: 4px;
+      padding-right: 5px;
+    }
+ 
+    .formulir .input-data input:not([type=radio], [type=checkbox]),
+    .formulir .input-data textarea,
+    .formulir .input-data select {
+      width: 50%;
+      box-sizing: border-box;
+      border: 1px solid #c2c2c2;
+      box-shadow: 1px 1px 4px #EBEBEB;
+      border-radius: 3px;
+      padding: 7px;
+      outline: none;
+    }
+ 
+    .formulir .input-data .radio {
+      width: 50%;
+    }
+ 
+    .formulir .input-data .radio label {
+      display: block;
+    }
+ 
+    .formulir .input-data .radio input {
+      border: 1px solid #0c0;
+    }
+ 
+    .formulir .input-data input:focus {
+      border: 1px solid #0c0
+    }
+ 
+    .formulir .input-data label span .required {
+      color: red;
+    }
+ 
+    .formulir .button {
+      text-align: center;
+    }
+ 
+    .formulir .button input {
+      border: none;
+      padding: 8px 15px 8px 15px;
+      background: #FF8500;
+      color: #fff;
+      box-shadow: 1px 1px 4px #DADADA;
+      border-radius: 3px;
+    }
+ 
+    .formulir .button input:hover {
+      background: #EA6B00;
+      color: #fff;
+    }
+ 
+    .footer {
+      text-align: center;
+      margin: 25px 0;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="formulir"> 
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <div class="input-data">
+        <label for="data-nama">
+          <span>Full name<span class="required">*</span></span>
+        </label>
+        <input type="text" id="data-nama" required>
+        <input type="text" id="data-nama">
+      </div>
+ 
+      <div class="input-data">
+        <label for="data-email">
+          <span>Email<span class="required">*</span></span>
+        </label>
+        <input type="email" id="data-email" required>
+      </div>
+ 
+      <div class="input-data">
+        <label for="data-subject">
+          <span>Subject</span>
+        </label>
+        <select id="data-subject">
+          <option>Advertise 1</option>
+          <option>Advertise 2</option>
+          <option>Advertise 3</option>
+        </select>
+      </div>
+ 
+      <div class="input-data">
+        <label for="data-message">
+          <span>Your Message</span>
+        </label>
+        <input type="textarea" id="data-message">
+      </div>
+ 
+ 
+      <div class="button">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+</body>
+ 
+</html>

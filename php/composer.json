@@ -1,0 +1,12 @@
+{
+    "name": "martinms/menuju-kp",
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    },
+    "authors": [
+        {
+            "name": "Martin Mulyo Syahidin",
+            "email": "mulyosyahidin95@gmail.com"
+        }
+    ]
+}

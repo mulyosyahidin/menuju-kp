@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Komponen-komponen Bootstrap</title>
+
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-6">
+        <h3 class="display-5">
+          Formulir
+        </h3>
+
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="nama">Nama lengkap:</label>
+            <input type="text" class="form-control" name="nama_lengkap" id="nama" required="required">
+          </div>
+
+          <div class="form-group">
+            <label for="npm">NPM</label>
+            <input type="text" name="npm" id="npm" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="field16">
+              <span>Input Select</span>
+            </label>
+            <select id="field16" class="form-control">
+              <option>Pilihan 1</option>
+              <option>Pilihan 2</option>
+              <option>Pilihan 3</option>
+            </select>
+          </div>
+
+
+        </form>
+      </div>
+      <div class="col-6">
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>Judul 1</th>
+              <th>Judul 2</th>
+              <th>Judul 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kolom 1 dibaris 1</td>
+              <td>Kolom 2 dibaris 1</td>
+              <td>Kolom 3 dibaris 1</td>
+            </tr>
+
+            <tr>
+              <td>Kolom 1 dibaris 2</td>
+              <td>Kolom 2 dibaris 2</td>
+              <td>Kolom 3 dibaris 2</td>
+            </tr>
+
+            <tr>
+              <td>Kolom 1 dibaris 3</td>
+              <td>Kolom 2 dibaris 3</td>
+              <td>Kolom 3 dibaris 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

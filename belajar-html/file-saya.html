@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<!-- 1. menentukan tipe dokumen
+doc = document
+type = tipe -->
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO : Search engine optimization -->
+
+  <meta name="description" content="ini adalah fle..." />
+
+  <title>Selamat Datang, HTML</title>
+
+  <link rel="stylesheet" href="">
+
+  <link rel="icon"
+    href="https://images.pexels.com/photos/8602183/pexels-photo-8602183.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&amp;display=swapps://github.com/produle/MockFlowFont/blob/master/MockFlowFont1/dist/MockFlowFont1.woff">
+
+  <style>
+    :root {
+      --surface-color: #fff;
+      --curve: 30;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #CDF0EA;
+      padding-top: 50px;
+    }
+
+    .content {
+      position: relative;
+    }
+
+    .card {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      display: block;
+      height: 100%;
+      border-radius: calc(var(--curve) * 1px);
+      overflow: hidden;
+      text-decoration: none;
+      max-width: 30%
+    }
+
+    .card .image {
+      width: 100%;
+      height: auto;
+    }
+
+    .card .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      border-radius: calc(var(--curve) * 1px);
+      background-color: var(--surface-color);
+      transform: translateY(100%);
+      transition: .2s ease-in-out;
+    }
+
+    .card:hover .overlay {
+      transform: translateY(0);
+    }
+
+    .card .header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      padding: 2em;
+      border-radius: calc(var(--curve) * 1px) 0 0 0;
+      background-color: var(--surface-color);
+      transform: translateY(-100%);
+      transition: .2s ease-in-out;
+    }
+
+    .card .arc {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+      z-index: 1;
+    }
+
+    .card .arc path {
+      fill: var(--surface-color);
+      d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+    }
+
+    .card:hover .header {
+      transform: translateY(0);
+    }
+
+    .card .thumb {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .card .title {
+      font-size: 1em;
+      margin: 0 0 .3em;
+      color: #6A515E;
+    }
+
+    .card .tagline {
+      display: block;
+      margin: 1em 0;
+      font-family: "MockFlowFont";
+      font-size: .8em;
+      color: #D7BDCA;
+    }
+
+    .card .status {
+      font-size: .8em;
+      color: #D7BDCA;
+    }
+
+    .card .description {
+      padding: 0 2em 2em;
+      margin: 0;
+      color: #D7BDCA;
+      font-family: "MockFlowFont";
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  </style> 
+</head>
+
+<body class="body">
+  <div class="content">
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        class="image" alt="Cover" />
+
+      <div class="overlay">
+        <div class="header">
+          <svg class="arc" xmlns="http://www.w3.org/2000/svg">
+            <path />
+          </svg>
+          <img class="thumb" src="https://avatars.githubusercontent.com/u/16255501?v=4" alt="Martin Mulyo Syahidin" />
+          <div class="header-text">
+            <h3 class="title">Martin Mulyo Syahidin</h3>
+            <span class="status">Universitas Bengkulu</span>
+          </div>
+        </div>
+        <p class="description">
+          Ini hanya sebuah deskripsi, dimana air mengalir sampai jauh.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const image = document.querySelector('img');
+  </script>
+</body>
+
+</html>

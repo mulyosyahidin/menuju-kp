@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title">
+      Form Register
+    </div>
+    <div class="form">
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="input">
+          <label for="nama">Nama Lengkap : </label>
+          <input type="text" name="nama" required>
+        </div>
+        <div class="input">
+          <label for="NPM">NPM :</label>
+          <input type="text" name="NPM" required>
+        </div>
+        <div class="gender">
+          <label for="gender">Jenis Kelamin :</label>
+          <br>
+          <input type="radio" name="gender" value="lk" required>Laki-Laki
+          <br>
+          <input type="radio" name="gender" value="pr" required>Perempuan
+        </div>
+        <div class="input">
+          <label for="prodi">Prodi : </label>
+          <select name="prodi" required>
+            <option value="1">Informatika</option>
+            <option value="2">Teknik Sipil</option>
+            <option value="3">Teknik Elektro</option>
+            <option value="4">Teknik Mesin</option>
+            <option value="5">Arsitektur</option>
+            <option value="6">Sistem Informasi</option>
+          </select>
+        </div>
+        
+        <div class="input">
+          <label for="email">Email :</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input">
+          <label for="pwd">Password</label>
+          <input type="password" name="pwd" required>
+        </div>
+        <div class="file_scan">
+          <label for="foto_ktm">File scan KTM :</label>
+          <br>
+          <input type="file" name="foto_ktm" required>
+        </div>
+        <div class="acc">
+          <input type="checkbox" name="acc_registration" required>
+          <label for="acc_registration">*anda setuju dengan peraturan pendaftaran</label>
+        </div>
+          <button type="submit">Register Now</button>
+      </form> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Menghubungkan HTML dan CSS</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {}
+
+    div {}
+
+    h2 {}
+
+    .post .judul-post {
+      color: red;
+    }
+
+    .sidebar .judul-post {
+      color: blue;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="judul-situs">
+      <a href="#">Sebuah Situs HTML</a>
+    </h1>
+  </header>
+  <div id="konten">
+    <article class="post">
+      <div class="heading">
+        <h2 class="judul-post">Ini adalah sebuah judul posting</h2>
+      </div>
+
+      <div class="isi">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sapiente iure nisi dolor temporibus,
+          laboriosam soluta atque hic explicabo vero alias molestiae aperiam voluptatum corporis omnis pariatur non
+          minus porro nam sint. Quasi qui inventore adipisci repellat impedit debitis similique, omnis non vitae porro
+          laborum dicta deleniti nihil ipsum commodi odit laudantium nesciunt? Corporis qui perferendis saepe sit vero,
+          minima illo reprehenderit ipsa, magni debitis accusantium, quis blanditiis repellat doloribus quasi veritatis
+          nostrum. Laudantium doloremque quaerat illum, sunt dolorum perspiciatis fugit quam sapiente repudiandae,
+          praesentium excepturi perferendis? Maiores debitis, laboriosam itaque velit voluptatum vitae, minima nisi modi
+          dolorem, omnis quod!</p>
+      </div>
+    </article>
+    <aside class="sidebar">
+      <div class="heading">
+        <h2 class="judul-post">Navigasi</h2>
+      </div>
+      <div class="isi">
+        <ul class="list-navigasi">
+          <li><a href="https://www.google.com/">Google</a></li>
+          <li><a href="https://github.com/">GitHub</a></li>
+          <li><a href="https://www.stackoverflow.com/">StackOverflow</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</body>
+
+</html>

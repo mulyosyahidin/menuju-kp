@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+
+    <style>
+        body {
+          font-family: 'PT Sans', sans-serif;
+          padding: 50px 20px 0;
+        }
+    
+        .formulir {
+          width: 65%;
+          margin: 0 auto;
+          padding: 15px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          border-radius: 10px;
+        }
+    
+        .formulir .title {
+          font-weight: bold;
+          border-bottom: 2px solid #ddd;
+          margin-bottom: 20px;
+          font-size: 22px;
+          padding-bottom: 3px;
+        }
+    
+        .formulir form {
+          margin-top: 30px;
+        }
+    
+        .formulir .input-data {
+          margin-bottom: 1rem;
+        }
+    
+        .formulir .input-data label span:not(.required) {
+          width: 250px;
+          font-weight: 500;
+          float: left;
+          padding-top: 4px;
+          padding-right: 5px;
+        }
+    
+        .formulir .input-data input:not([type=radio], [type=checkbox]),
+        .formulir .input-data textarea,
+        .formulir .input-data select {
+          width: 50%;
+          box-sizing: border-box;
+          border: 1px solid #c2c2c2;
+          box-shadow: 1px 1px 4px #EBEBEB;
+          border-radius: 3px;
+          padding: 7px;
+          outline: none;
+        }
+    
+        .formulir .input-data .radio {
+          width: 50%;
+        }
+    
+        .formulir .input-data .radio label {
+          display: block;
+        }
+    
+        .formulir .input-data .radio input {
+          border: 1px solid rgb(0, 204, 177);
+        }
+    
+        .formulir .input-data input:focus {
+          border: 1px solid rgb(0, 204, 177)
+        }
+    
+        .formulir .input-data label span .required {
+          color: red;
+        }
+    
+        .formulir .button {
+          text-align: center;
+        }
+    
+        .formulir .button input {
+          border: none;
+          padding: 8px 15px 8px 15px;
+          background: #0044ff;
+          color: #fff;
+          box-shadow: 1px 1px 4px #DADADA;
+          border-radius: 3px;
+        }
+    
+        .formulir .button input:hover {
+          background: #2860fc;
+          color: #fff;
+        }
+    
+        .footer {
+          text-align: center;
+          margin: 25px 0;
+        }
+      </style>
+</head>
+
+<body bgcolor="gray">
+    <div class="formulir">
+        <form action="" method="POST">
+            <div class="input-data">
+                <label for="nama">
+                    <span>Full Name <span class="required">*</span></span>
+                </label>
+                <input type="text" name="nama-depan" id="nama" placeholder="First" required>
+                <input type="text" name="nama-belakang" id="nama2" placeholder="Last">
+            </div>
+
+            <div class="input-data">
+                <label for="email">
+                    <span>Email <span class="required">*</span></span>
+                </label>
+                <input type="text" name="email" id="email" required>
+            </div>
+
+            <div class="input-data">
+                <label for="subject">
+                  <span>Subject</span>
+                </label>
+                <select id="subject" name="subject">
+                  <option disabled selected>Choose subject...</option>
+                  <option value="A">Advertise</option>
+                  <option value="B">Business</option>
+                  <option value="C">Meeting</option>
+                  <option value="D">Others</option>
+                </select>
+            </div>
+
+            <div class="input-data">
+                <label for="message">
+                  <span>Your Message <span class="required">*</span></span>
+                </label>
+                <textarea id="message" required></textarea>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+              </div>
+        </form>
+    </div>
+    
+</body>
+</html>

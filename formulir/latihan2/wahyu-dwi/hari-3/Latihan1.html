@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .asterisk{
+            color:red;
+            font-weight:bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <main class="container col-6">
+        <section class="form-input form-control my-5">
+            <div class="title text-center m-4">
+                <h2>Formulir Anggota Bulu Burung</h2>
+            </div>
+            <div>
+                <form class="p-3" action='display_bio.php' method='post'>
+                    <div class="mb-3">
+                        <label for="firstName lastName" class="form-label">Full Name <span class="asterisk">*</span></label>
+                        <div class="fullName row">
+                            <div class="col-xl-6">
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First" required>
+                            </div>
+                            <div class="col-xl-6">
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email <span class="asterisk">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="selectSubject" class="form-label">Subject</label>
+                        <select class="form-select" id="selectSubject" name="selectSubject">
+                            <option value="advertise" selected>Advertise</option>
+                            <option value="informatics">Informatics</option>
+                            <option value="mathematics">Mathematics</option>
+                        </select>
+                    </div>         
+                    <div class="mb-3"></div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message <span class="asterisk">*</span></label>
+                        <textarea class="form-control" id="message" name="pesanku" style="height: 100px" required></textarea>
+                    </div>
+                    <div class="mt-4 mb-2 col-xl-2 mx-auto">
+                        <button type="submit" class="btn btn-success form-control"  name="inputBiodata" >Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

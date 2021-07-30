@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formulir HTML</title>
+</head>
+
+<body>
+  <form method="GET" action="proses.php">
+
+    username
+    <input type="text" name="username" value="mmms">
+    <br>
+    <br>
+    password
+    <input type="password" name="password">
+    <br>
+    <br>
+    NPM
+    <input type="text" name="npm" id="data-npm">
+
+    <br><br>
+    <div>
+      <b>Pilih prodi</b>
+      <br>
+
+      <input type="radio" name="prodi" value="A" checked="checked"> Informatika <br>
+      <input type="radio" name="prodi" value="B"> Teknik Elektro <br>
+      <input type="radio" name="prodi" value="C"> Teknik Mesin <br>
+
+    </div>
+    <br>
+    <div>
+      <b>Jenis kelamin</b>
+      <br>
+      <input type="radio" name="jenis_kelamin" value="l"> Laki-laki<br>
+      <input type="radio" name="jenis_kelamin" value="p"> Perempuan<br>
+    </div>
+
+    <br>
+    <div>
+      <input type="checkbox" name="setuju" value="ya">
+        Saya setuju dengan bla bla bla.....
+    </div>
+
+    <br>
+    <div>
+      <b>Pilih hobi</b>
+      <br>
+      <input type="checkbox" name="hobi[]" value="makan"> Makan <br>
+      <input type="checkbox" name="hobi[]" value="baca"> Membaca <br>
+      <input type="checkbox" name="hobi[]" value="main"> Main <br>
+      <input type="checkbox" name="hobi[]" value="game"> Game <br>
+    </div>
+
+    <br>
+
+    <div>
+      alamat: <br>
+      <textarea name="alamat"></textarea>
+    </div>
+
+    <br>
+    <div>
+      <b>pilih provinsi</b>
+      <br>
+      <select name="provinsi">
+        <option value="bengkulu">Bengkulu</option>
+        <option value="lampung">Lampung</option>
+        <option value="jambi">Jambi</option>
+        <option value="test">Lorem ipsum dolor sit.</option>
+      </select>
+    </div>
+
+    <br>
+    <div>
+      <label for="data-email">Email</label>
+      <input type="email" name="email" id="data-email">
+    </div>
+
+    <br><br><br>
+
+    <input type="submit" value="daftar">
+
+  </form>
+</body>
+
+</html>
