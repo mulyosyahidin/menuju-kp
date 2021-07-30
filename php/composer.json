@@ -1,5 +1,5 @@
 {
-    "name": "martinms/menuju-kp",
+    "name": "mulyosyahidin/menuju-kp",
     "require": {
         "fzaninotto/faker": "^1.9"
     },
