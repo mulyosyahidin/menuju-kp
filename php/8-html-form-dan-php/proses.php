@@ -15,3 +15,29 @@
 // echo "Nama: $post_nama <br>";
 // echo "Usia: $post_usia <br>";
 
+
+//$nama = $_GET['nama'];
+//$usia = $_GET['usia'];
+
+//echo $nama;
+//echo $usia;
+
+if (isset($_POST['nama'])) {
+  $nama = htmlspecialchars($_POST['nama']);
+  $usia = $_POST['usia'];
+
+  if (empty($nama)) {
+    echo 'Nama harus diisi';
+  }
+
+  if (empty($usia)) {
+    echo 'Usia harus diisi';
+  }
+
+  echo $nama;
+  echo '<br>';
+  echo $usia;
+}
+else {
+  echo 'Nama harus ada';
+}
