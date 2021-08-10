@@ -1,5 +1,6 @@
 {
     "name": "mulyosyahidin/menuju-kp",
+    "type": "project",
     "require": {
         "fzaninotto/faker": "^1.9"
     },
