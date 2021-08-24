@@ -1,6 +1,5 @@
 {
   "files.autoSave": "afterDelay",
-  "editor.tabSize": 2,
   "editor.codeActionsOnSave": null,
   "editor.comments.insertSpace": false,
   "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
