@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,18 @@ Route::get('/siswa/{id}', [SiswaController::class, 'lihat']);
 Route::get('/contoh', function () {
     return view('students.index');
 });
+
+
+Route::get('/public', function () {
+    return view('themes.impose.index');
+});
+
+Route::get('/contact', function () {
+    return view('themes.impose.contact');
+});
+
+Route::get('/admin', function () {
+    return view('themes.sb-admin2.index');
+});
+
+Route::get('/admin/students', [StudentController::class, 'index']);
