@@ -31,8 +31,8 @@ Route::get('/data/create', [DataController::class, 'tambah']);
 
 Route::get('/data/show/{nama}/{usia}', [DataController::class, 'show']);
 
-Route::get('/siswa', [SiswaController::class, 'index']);
-Route::get('/siswa/{id}', [SiswaController::class, 'lihat']);
+// Route::get('/siswa', [SiswaController::class, 'index']);
+// Route::get('/siswa/{id}', [SiswaController::class, 'lihat']);
 
 
 
@@ -55,3 +55,6 @@ Route::get('/admin', function () {
 });
 
 Route::get('/admin/students', [StudentController::class, 'index']);
+
+Route::get('/siswa', fn () => view('siswa.index'));
+Route::get('/siswa/tambah', fn () => view('siswa.tambah'));

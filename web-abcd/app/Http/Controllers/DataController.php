@@ -8,7 +8,10 @@ class DataController extends Controller
 {
     public function index()
     {
-        echo 'Hello world!';
+        $siswa = 'test variabel';
+        $students = ['Andi', 'Dedy'];
+
+        return view('abc', compact('siswa', 'students'));
     }
 
     public function tambah()
