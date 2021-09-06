@@ -1,9 +1,9 @@
 @extends('layouts.admin')
-@section('title', 'Data Mahasiswa')
+@section('title', 'Dasbor Operator')
 
 @section('content')
     <div class="container-fluid">
-        <h1 class="h3 mb-2 text-gray-800">Daftar Mahasiswa</h1>
+        <h1 class="h3 mb-2 text-gray-800">Dasbor Operator</h1>
 
         <div class="row">
             <div class="col-12">

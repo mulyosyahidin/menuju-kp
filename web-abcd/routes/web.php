@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DataController;
-use App\Http\Controllers\SiswaController;
-use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,41 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', fn () => 'Halo, ini route users');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-// Route::get('/data', function () {
-    //     return 'Halo ini di route /data';
-// });
-
-Route::get('/data', [DataController::class, 'index']);
-Route::get('/data/create', [DataController::class, 'tambah']);
-
-Route::get('/data/show/{nama}/{usia}', [DataController::class, 'show']);
-
-// Route::get('/siswa', [SiswaController::class, 'index']);
-// Route::get('/siswa/{id}', [SiswaController::class, 'lihat']);
+require __DIR__.'/auth.php';
 
 
+Route::middleware(['auth', 'role:operator'])->group(function () {
+    Route::get('/test-operator', function () {
+        return 'Ini operator';
+    });
 
-
-Route::get('/contoh', function () {
-    return view('students.index');
+    Route::get('/op', fn () => view('themes.sb-admin2.operator.index'));
+ 
+    //semua route dalam grup ini hanya bisa diakses oleh operator
 });
+ 
 
-
-Route::get('/public', function () {
-    return view('themes.impose.index');
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/test-admin', function () {
+        return 'Ini admin';
+    });
+ 
+    //semua route dalam grup ini hanya bisa diakses admin
 });
-
-Route::get('/contact', function () {
-    return view('themes.impose.contact');
-});
-
-Route::get('/admin', function () {
-    return view('themes.sb-admin2.index');
-});
-
-Route::get('/admin/students', [StudentController::class, 'index']);
-
-Route::get('/siswa', fn () => view('siswa.index'));
-Route::get('/siswa/tambah', fn () => view('siswa.tambah'));
