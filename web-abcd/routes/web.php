@@ -33,7 +33,17 @@ Route::middleware(['auth', 'role:operator'])->as('operator.')->prefix('op')->gro
     Route::get('/', fn () => view('themes.sb-admin2.operator.index'));
 
     Route::get('/barang', [BarangController::class, 'index'])->name('barang');
+
+
     Route::get('/barang/tambah', [BarangController::class, 'create'])->name('barang.create');
+    Route::post('/barang/simpan', [BarangController::class, 'store'])->name('barang.store');
+
+    Route::get('/barang/{barang}', [BarangController::class, 'show'])->name('barang.show');
+
+    Route::get('/barang/{barang}/edit', [BarangController::class, 'edit'])->name('barang.edit');
+    Route::put('/barang/{barang}/update', [BarangController::class, 'update'])->name('barang.update');
+
+    Route::delete('/barang/{barang}', [BarangController::class, 'destroy'])->name('barang.destroy');
 });
 
 

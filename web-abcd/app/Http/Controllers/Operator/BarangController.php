@@ -10,18 +10,78 @@ class BarangController extends Controller
 {
     public function index()
     {
-        $barang = Barang::all();
+        $barang = Barang::orderBy('created_at', 'DESC')->paginate(10);
 
         return view('themes.sb-admin2.operator.barang.index', compact('barang'));
     }
 
     public function create()
     {
-        echo "form tambah barang";
+        return view('themes.sb-admin2.operator.barang.create');
     }
 
     public function store(Request $request)
     {
-        echo "disni validasi data dan menyimpan data";
+        $request->validate([
+            'nama' => 'required|min:4',
+            'kode_barang' => 'required|min:4|unique:barang,kode_barang',
+            'stok' => 'required|min:0|max:999|numeric',
+            'satuan' => 'nullable',
+            'deskripsi' => 'nullable',
+        ]);
+
+        // disini kode jika validasi berhasil
+        $barang = new Barang();
+        $barang->nama = $request->nama;
+        $barang->kode_barang = $request->kode_barang;
+        $barang->stok = $request->stok;
+        $barang->deskripsi = $request->deskripsi;
+        $barang->satuan = $request->satuan;
+        $barang->save();
+
+        return redirect()
+            ->to(route('operator.barang'))
+            ->withSuccess('Berhasil menambah data barang');
+    }
+
+    public function show(Barang $barang)
+    {
+        return view('themes.sb-admin2.operator.barang.show', compact('barang'));
+    }
+    
+    public function edit(Barang $barang)
+    {
+        return view('themes.sb-admin2.operator.barang.edit', compact('barang'));
+    }
+
+    public function update(Request $request, Barang $barang)
+    {
+        $request->validate([
+            'nama' => 'required|min:4',
+            'kode_barang' => 'required|min:4',
+            'stok' => 'required|min:0|max:999|numeric',
+            'satuan' => 'nullable',
+            'deskripsi' => 'nullable',
+        ]);
+
+        $barang->nama = $request->nama;
+        $barang->kode_barang = $request->kode_barang;
+        $barang->stok = $request->stok;
+        $barang->deskripsi = $request->deskripsi;
+        $barang->satuan = $request->satuan;
+        $barang->save();
+
+        return redirect()
+            ->to(route('operator.barang'))
+            ->withSuccess('Berhasil mengubah data barang');
+    }
+
+    public function destroy(Barang $barang)
+    {
+        $barang->delete();
+
+        return redirect()
+            ->to(route('operator.barang'))
+            ->withSuccess('Berhasil menghapus data barang');
     }
 }
