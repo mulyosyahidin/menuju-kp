@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\Operator\BarangController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Operator\BarangController;
+use App\Http\Controllers\Operator\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,8 @@ Route::middleware(['auth', 'role:operator'])->as('operator.')->prefix('op')->gro
     Route::put('/barang/{barang}/update', [BarangController::class, 'update'])->name('barang.update');
 
     Route::delete('/barang/{barang}', [BarangController::class, 'destroy'])->name('barang.destroy');
+
+    Route::resource('kategori', KategoriController::class);
 });
 
 

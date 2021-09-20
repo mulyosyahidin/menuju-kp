@@ -28,6 +28,12 @@
             <span>Master Barang</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('operator.kategori.index') }}">
+            <i class="fas fa-fw fa-list"></i>
+            <span>Kategori Barang</span></a>
+    </li>
+
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="tables.html">
