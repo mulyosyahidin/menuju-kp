@@ -20,6 +20,10 @@
 									<td class="font-weight-bold">{{ $barang->nama }}</td>
 								</tr>
 								<tr>
+									<td>Kategori Barang</td>
+									<td class="font-weight-bold">{{ $barang->kategori->nama }}</td>
+								</tr>
+								<tr>
 									<td>Kode Barang</td>
 									<td class="font-weight-bold">{{ $barang->kode_barang }}</td>
 								</tr>

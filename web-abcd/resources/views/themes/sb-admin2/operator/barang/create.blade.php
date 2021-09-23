@@ -12,7 +12,18 @@
 
                     <div class="card shadow mb-4">
 
-						<div class="card-body">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="id-kategori">Kategori:</label>
+                                <select name="id_kategori" id="id-kategori" class="form-control" required="required">
+                                    <option disabled selected>Pilih kategori...</option>
+                                    @foreach ($kategori as $item)
+                                        <option value="{{ $item->id }}"
+                                            @if (old('id_kategori') == $item->id) selected @endif>{{ $item->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <label for="nama" class="control-label">Nama Barang:</label>
                                 <input type="text" name="nama" value="{{ old('nama') }}" id="nama"
@@ -73,9 +84,9 @@
                                 @enderror
                             </div>
                         </div>
-						<div class="card-footer text-right">
-							<input type="submit" value="Tambah Data" class="btn btn-primary">
-						</div>
+                        <div class="card-footer text-right">
+                            <input type="submit" value="Tambah Data" class="btn btn-primary">
+                        </div>
 
                     </div>
                 </form>

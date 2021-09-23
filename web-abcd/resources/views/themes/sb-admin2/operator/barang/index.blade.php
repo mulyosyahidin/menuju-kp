@@ -37,6 +37,7 @@
                                         <th scope="col">Nama Barang</th>
                                         <th scope="col">Kode Barang</th>
                                         <th scope="col">Stok</th>
+                                        <th scope="col">Kategori</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -47,6 +48,7 @@
                                             <td>{{ $item->nama }}</td>
                                             <td>{{ $item->kode_barang }}</td>
                                             <td>{{ $item->stok }}</td>
+                                            <td>{{ $item->kategori->nama }}</td>
                                             <td class="text-right">
                                                 <form action="{{ route('operator.barang.destroy', $item->id) }}" method="post">
                                                     @csrf

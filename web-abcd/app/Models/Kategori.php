@@ -30,4 +30,9 @@ class Kategori extends Model
      * @var string
      */
     public $fillable = ['nama'];
+
+    public function barang()
+    {
+        return $this->hasMany(Barang::class, 'id_kategori', 'id');
+    }
 }

@@ -31,11 +31,30 @@
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Barang Dalam Kategori Ini</h6>
                     </div>
+					@if (count($kategori->barang) > 0)
+						<div class="table-responsive">
+							<table class="table table-condensed table-hover">
+								<thead class="thead-dark">
+									<th scope="col">Kode</th>
+									<th scope="col">Nama Barang</th>
+								</thead>
+								<tbody>
+									@foreach ($kategori->barang as $item)
+										<tr>
+											<td>{{ $item->kode_barang }}</td>
+											<td>{{ $item->nama }}</td>
+										</tr>
+									@endforeach
+								</tbody>
+							</table>
+						</div>
+					@else
 					<div class="card-body">
 						<div class="alert alert-info">
-							Semua barang dalam kategori <b>{{ $kategori->nama }}</b> akan ditampilkan disini.
+							Tidak ada barang dalam kategori ini.
 						</div>
 					</div>
+					@endif
                 </div>
 			</div>
         </div>

@@ -59,6 +59,8 @@ class KategoriController extends Controller
      */
     public function show(Kategori $kategori)
     {
+        $kategori->load('barang');
+
         return view('themes.sb-admin2.operator.kategori.show', compact('kategori'));
     }
 
